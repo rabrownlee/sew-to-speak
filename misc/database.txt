@@ -1,0 +1,243 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Dec 20, 2020 at 06:52 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `Blog`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Comments`
+--
+
+CREATE TABLE `Comments` (
+  `CommentID` int(11) NOT NULL,
+  `PostID` int(11) NOT NULL,
+  `UserID` int(11) NOT NULL,
+  `Comment` text NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Comments`
+--
+
+INSERT INTO `Comments` (`CommentID`, `PostID`, `UserID`, `Comment`, `Date`) VALUES
+(1, 1, 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta blandit venenatis. Sed vitae commodo erat. In eu finibus mauris. Fusce aliquet arcu ligula, vitae aliquet sapien vulputate nec. Maecenas lacinia magna ut mauris aliquam condimentum. Curabitur vehicula erat dolor, sit amet hendrerit quam sollicitudin sit amet. Sed feugiat velit in risus sollicitudin ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec varius libero est, ac posuere arcu rhoncus ac. Aliquam eu bibendum metus. Sed ullamcorper urna vitae augue euismod, at ultricies diam suscipit. Morbi luctus, velit ut tincidunt dictum, tortor augue accumsan urna, ut porta turpis ex quis enim. Fusce eleifend, tortor eu lacinia aliquam, nisi ipsum blandit elit, quis elementum mauris arcu sed felis. Vivamus quis nisl non est condimentum aliquet blandit id arcu. Curabitur sit amet molestie dui, at luctus ante. Curabitur lobortis massa non lacus facilisis elementum', '2020-12-19 16:13:28'),
+(2, 1, 2, 'Suspendisse quis urna ac sapien tempor dapibus at eu justo. Aliquam vestibulum, massa vel porttitor euismod, augue leo malesuada leo, fringilla varius tortor libero in eros. Curabitur sit amet tortor eu purus porttitor scelerisque. Curabitur quis faucibus massa, quis vehicula nulla. Cras a neque sagittis, cursus augue quis, porta mauris. Morbi eget dignissim purus. Etiam orci ex, euismod placerat dignissim ac, lobortis at augue. Nullam ac dapibus enim, sed aliquam nulla. Nam in varius risus. Aenean interdum purus ac arcu lobortis semper. Fusce bibendum odio in blandit hendrerit. In hac habitasse platea dictumst. Aliquam ac enim eu odio pellentesque vehicula. Nam maximus tellus et nisi dapibus placerat', '2020-12-19 16:13:28'),
+(3, 1, 2, 'Sed ut est nulla. Morbi imperdiet dui vitae sodales rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ex turpis, dapibus vel placerat sed, cursus sed nisi. Vestibulum non rhoncus purus. Nulla eu nibh at elit viverra rutrum. Vivamus volutpat viverra ultrices. Pellentesque porta scelerisque auctor. Sed luctus, massa nec luctus fringilla, urna diam semper turpis, a cursus massa ligula vitae mi.', '2020-12-19 16:13:28'),
+(4, 3, 2, 'Suspendisse auctor vulputate leo, vitae tincidunt odio pharetra nec. Ut eu sagittis libero. Nulla ac molestie quam, a consequat risus. Suspendisse ultricies id urna in euismod. Vestibulum diam sem, tincidunt ac venenatis vitae, tincidunt id nisi. Sed ipsum velit, sodales nec ultricies eget, sagittis eget lorem. Nam in congue nulla.\r\n', '2020-12-19 16:13:28'),
+(5, 2, 2, 'Sed ut est nulla. Morbi imperdiet dui vitae sodales rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ex turpis, dapibus vel placerat sed, cursus sed nisi. Vestibulum non rhoncus purus. Nulla eu nibh at elit viverra rutrum. Vivamus volutpat viverra ultrices. Pellentesque porta scelerisque auctor. Sed luctus, massa nec luctus fringilla, urna diam semper turpis, a cursus massa ligula vitae mi.\r\n', '2020-12-19 16:13:28'),
+(6, 2, 2, 'Duis sollicitudin odio nec enim commodo convallis. In vulputate orci nibh, quis molestie nulla aliquet vitae. Etiam ac lacus ac ipsum facilisis euismod. Duis nec dui id libero viverra vulputate. Aenean feugiat porttitor urna, eget ornare ex sodales in. Curabitur in blandit justo. Duis dictum ante in lorem imperdiet, sit amet aliquam neque molestie. Fusce bibendum felis in nunc sodales malesuada. Nam ut tortor eu libero condimentum rhoncus. Vivamus non enim bibendum nisl gravida ornare. Curabitur mauris est, ultricies mattis bibendum id, finibus vel ipsum. Proin vitae ex porttitor, pellentesque dui sit amet, elementum urna. Sed vestibulum sed magna vitae ultricies. Phasellus aliquet ligula non orci varius gravida.\r\n', '2020-12-19 16:13:28'),
+(7, 4, 2, 'Aenean a tincidunt dolor, sed finibus ipsum. Suspendisse cursus erat placerat consectetur maximus. Sed in porta nulla. Nullam blandit congue ligula, et condimentum quam vulputate id. Cras sagittis arcu orci, ut vestibulum neque ornare id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu leo vitae velit consequat consectetur a eu est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean laoreet tortor eros, sed pretium mi lacinia ut. Nunc imperdiet velit quam, quis aliquet augue imperdiet vel. Duis eu ipsum vel dolor vulputate vestibulum eget ac lacus. Sed sed erat volutpat, rutrum lectus sed, tempus justo. Pellentesque finibus lectus erat, non lacinia urna mollis et. Sed in ullamcorper orci.', '2020-12-19 16:13:28'),
+(8, 4, 2, 'Integer a lorem at enim blandit porta. Praesent mattis nunc id lectus pellentesque faucibus. Fusce quis malesuada erat, non ullamcorper ante. Nulla aliquam volutpat ligula, vel pretium arcu interdum vel. Nam id varius nisi, ut fringilla diam. Vestibulum congue ultricies nisl eget malesuada. Donec eget dapibus tortor. Nullam pharetra ornare mauris sed ornare. Donec et porttitor mauris.', '2020-12-19 16:13:28'),
+(9, 4, 2, 'Donec ornare urna et molestie iaculis. Quisque tincidunt justo id venenatis semper. Nam massa eros, semper eu felis eget, sagittis vulputate risus. Aenean cursus scelerisque iaculis. Vivamus enim sem, pharetra placerat vulputate pellentesque, ornare in velit. Donec sollicitudin pharetra fringilla. Duis pretium malesuada nisi. Vivamus at varius lectus. Praesent est sem, lobortis nec dui et, efficitur aliquet metus. Quisque pharetra vulputate turpis a sagittis. In id risus justo. Aenean id elementum justo. Fusce rutrum ligula a ligula fermentum dapibus. Nunc non libero tincidunt leo lacinia blandit quis vel elit. Vestibulum mattis justo turpis, ac commodo nulla lacinia at. Praesent condimentum eget ipsum quis molestie.', '2020-12-19 16:13:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Login`
+--
+
+CREATE TABLE `Login` (
+  `loginID` int(4) NOT NULL,
+  `UserID` int(4) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Login`
+--
+
+INSERT INTO `Login` (`loginID`, `UserID`, `username`, `password`) VALUES
+(1, 2, 'harnisk', '$2y$10$uv9MRgU/T4JLfto4Nj68eeMC1/WqCVqqNfYdjtnW0nMDVhoIHiIvi'),
+(3, 3, 'rachel', 'Password2@'),
+(4, 4, 'bbhatt', '$2y$10$po8fLn8GHfX3yvzJKRneZuFMgo9QewSfkzkWfE79rtRTq.y6.DLnm'),
+(5, 9, 'gingy', '$2y$10$n.ywxv.wT5klv0ycj7bHV.liMUdbR5DE64PxR2ixR.dDANhzKG1tq'),
+(6, 10, 'starbucks', '$2y$10$l7NbRplnIWKdICVKW1eIuuZKHLVFHDnVw8AZU4gLFd5WYS5.54ULe');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Posts`
+--
+
+CREATE TABLE `Posts` (
+  `PostID` int(11) NOT NULL,
+  `UserID` int(11) NOT NULL,
+  `Title` varchar(255) NOT NULL,
+  `ImageFName` varchar(50) DEFAULT NULL,
+  `Post` text NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Posts`
+--
+
+INSERT INTO `Posts` (`PostID`, `UserID`, `Title`, `ImageFName`, `Post`, `Date`) VALUES
+(1, 2, 'Four cute cats!', 'cats.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate vitae est eu volutpat. Pellentesque egestas rhoncus libero, a aliquam nibh egestas sed. Vivamus vitae velit justo. Sed vitae tempus ligula. Mauris molestie risus et tempus ultricies. Quisque ornare, dui sit amet finibus imperdiet, erat metus consectetur purus, et imperdiet tellus ipsum sed ligula. Nulla egestas tristique lectus nec consequat. Suspendisse ac condimentum dui, sit amet vestibulum nulla. Nulla imperdiet volutpat placerat. Mauris finibus dui eu est rutrum, a varius turpis vulputate. Vestibulum id rutrum odio. Integer lacinia massa eget nulla finibus, eget sodales eros vehicula. Duis ornare euismod felis, non elementum neque laoreet at. Fusce non scelerisque diam. Sed dignissim eleifend justo. Ut eget est eget tellus tincidunt mollis. Donec eros justo, faucibus ac gravida aliquet, elementum a purus. Aliquam vulputate sagittis nibh nec bibendum. Praesent tristique sodales nisi, sed rutrum neque imperdiet ut. Etiam sed odio nec tellus dictum fringilla. Aenean enim purus, aliquam in augue et, tincidunt fermentum est. Proin rutrum mattis tristique. Aenean et tellus ultricies orci aliquam malesuada nec a dolor. Nullam id eros rutrum, faucibus purus nec, iaculis lectus. Suspendisse mattis erat sit amet vestibulum pharetra. Donec hendrerit odio eget iaculis consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vitae ex finibus, tincidunt risus facilisis, efficitur ipsum. Donec gravida interdum condimentum. Curabitur suscipit, odio a hendrerit tempor, libero odio venenatis lectus, id lobortis libero orci eget sapien. Quisque lobortis dui suscipit risus elementum, ut consectetur augue sodales. Quisque id orci vel ex volutpat consectetur ut vitae urna. Morbi quis aliquam tellus, sit amet lobortis quam. Fusce sed enim egestas, fringilla tellus id, pellentesque nisl. Duis lacinia, elit id ultrices commodo, libero velit scelerisque turpis, quis ornare purus ligula non metus. Suspendisse quis posuere ex, sed elementum nunc. Nunc at mauris a felis feugiat accumsan. Sed tristique ut nunc sed viverra. Integer eu luctus diam, in feugiat erat. Sed dignissim quis nisl id porttitor. Phasellus tristique odio ac felis feugiat, vel sagittis nibh luctus. Aliquam at nibh id nibh hendrerit consectetur. Praesent nec neque et augue sodales congue eu et libero. Nam scelerisque dolor sed iaculis luctus. Fusce pulvinar dignissim consequat. Proin varius, tellus id congue luctus, lacus elit cursus ipsum, eu tempus ex ex sit amet sem. Pellentesque rhoncus pulvinar ipsum non fermentum. Aenean non libero sit amet massa facilisis placerat. Donec pulvinar purus felis, et placerat lorem dictum eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id quam eu enim aliquam viverra ut nec lectus. Quisque semper, massa non sodales luctus, nunc sem porttitor nisl, vitae aliquam sapien tortor vel ante. Aliquam placerat, nulla a accumsan porta, quam mauris ornare erat, a mattis ipsum nibh id nulla. Mauris pulvinar, ligula a placerat aliquet, enim massa condimentum mi, vitae lobortis elit urna in purus. Morbi dictum lorem a risus scelerisque, id lobortis erat consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\r\n\r\n', '2020-12-19 16:14:00'),
+(2, 2, 'Squad up!', 'captainunderpants.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus id lorem vel sagittis. Suspendisse venenatis, metus ut pulvinar blandit, ipsum massa tincidunt lectus, a egestas augue odio non augue. Quisque pharetra sapien ut orci venenatis elementum. Duis congue in sapien at suscipit. Nullam tristique dictum ligula, tempus convallis velit lacinia a. Morbi tincidunt pellentesque sem, pretium sodales est varius et. Pellentesque tempus eros sit amet elit vulputate egestas. Pellentesque auctor rhoncus ligula in faucibus. Praesent est ante, rutrum in nunc ut, dapibus rutrum nulla. Aliquam erat volutpat. Sed risus enim, maximus a felis sed, rhoncus gravida tortor. Phasellus et nulla hendrerit, gravida diam ac, pellentesque ex. Curabitur vulputate felis non semper pretium. Phasellus tellus lorem, vulputate non dapibus et, lobortis non mauris.\r\n\r\nDonec placerat massa nec pretium pellentesque. Proin lacus mi, sodales eget ultricies ut, maximus eleifend massa. Fusce ullamcorper nisl tortor, vitae fringilla elit blandit ac. Aliquam erat volutpat. Praesent faucibus tempus sollicitudin. Duis auctor mattis quam id laoreet. Maecenas dignissim, enim eget congue egestas, nunc augue varius tellus, ac malesuada libero risus a justo. Donec vel scelerisque est. Curabitur blandit eu justo quis vestibulum. Donec sed tortor justo. Praesent vel tincidunt lacus. Morbi sodales elit vel porta imperdiet. Proin faucibus velit magna, et rhoncus orci gravida quis. Suspendisse ultrices pellentesque dolor sed semper. Morbi et cursus ex, id viverra tortor. Nam mattis arcu a dapibus ultricies.\r\n\r\nFusce dignissim viverra libero, et efficitur velit viverra in. Etiam ornare viverra egestas. Vestibulum tincidunt, eros vel iaculis ultricies, justo enim dignissim diam, et vestibulum velit tortor ut urna. Quisque mollis arcu sapien, sit amet mollis erat ultrices ullamcorper. In sagittis molestie tristique. Nunc dapibus sollicitudin tellus, at facilisis libero vulputate quis. Vestibulum dictum in nibh vitae pretium. Sed sodales vehicula mi, et pellentesque risus elementum eget. Fusce quis ante aliquam, ultricies justo quis, aliquam nisl. Nam in efficitur lorem.\r\n\r\n', '2020-12-19 16:14:00'),
+(3, 2, 'Naruto eating ramen!', 'naruto.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus id lorem vel sagittis. Suspendisse venenatis, metus ut pulvinar blandit, ipsum massa tincidunt lectus, a egestas augue odio non augue. Quisque pharetra sapien ut orci venenatis elementum. Duis congue in sapien at suscipit. Nullam tristique dictum ligula, tempus convallis velit lacinia a. Morbi tincidunt pellentesque sem, pretium sodales est varius et. Pellentesque tempus eros sit amet elit vulputate egestas. Pellentesque auctor rhoncus ligula in faucibus. Praesent est ante, rutrum in nunc ut, dapibus rutrum nulla. Aliquam erat volutpat. Sed risus enim, maximus a felis sed, rhoncus gravida tortor. Phasellus et nulla hendrerit, gravida diam ac, pellentesque ex. Curabitur vulputate felis non semper pretium. Phasellus tellus lorem, vulputate non dapibus et, lobortis non mauris. Donec placerat massa nec pretium pellentesque. Proin lacus mi, sodales eget ultricies ut, maximus eleifend massa. Fusce ullamcorper nisl tortor, vitae fringilla elit blandit ac. Aliquam erat volutpat. Praesent faucibus tempus sollicitudin. Duis auctor mattis quam id laoreet. Maecenas dignissim, enim eget congue egestas, nunc augue varius tellus, ac malesuada libero risus a justo. Donec vel scelerisque est. Curabitur blandit eu justo quis vestibulum. Donec sed tortor justo. Praesent vel tincidunt lacus. Morbi sodales elit vel porta imperdiet. Proin faucibus velit magna, et rhoncus orci gravida quis. Suspendisse ultrices pellentesque dolor sed semper. Morbi et cursus ex, id viverra tortor. Nam mattis arcu a dapibus ultricies. Fusce dignissim viverra libero, et efficitur velit viverra in. Etiam ornare viverra egestas. Vestibulum tincidunt, eros vel iaculis ultricies, justo enim dignissim diam, et vestibulum velit tortor ut urna. Quisque mollis arcu sapien, sit amet mollis erat ultrices ullamcorper. In sagittis molestie tristique. Nunc dapibus sollicitudin tellus, at facilisis libero vulputate quis. Vestibulum dictum in nibh vitae pretium. Sed sodales vehicula mi, et pellentesque risus elementum eget. Fusce quis ante aliquam, ultricies justo quis, aliquam nisl. Nam in efficitur lorem.\r\n\r\n', '2020-12-19 16:14:00'),
+(4, 2, 'Here comes the sun.', 'herecomesthesun.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate vitae est eu volutpat. Pellentesque egestas rhoncus libero, a aliquam nibh egestas sed. Vivamus vitae velit justo. Sed vitae tempus ligula. Mauris molestie risus et tempus ultricies. Quisque ornare, dui sit amet finibus imperdiet, erat metus consectetur purus, et imperdiet tellus ipsum sed ligula. Nulla egestas tristique lectus nec consequat. Suspendisse ac condimentum dui, sit amet vestibulum nulla. Nulla imperdiet volutpat placerat. Mauris finibus dui eu est rutrum, a varius turpis vulputate. Vestibulum id rutrum odio. Integer lacinia massa eget nulla finibus, eget sodales eros vehicula.\r\n\r\nDuis ornare euismod felis, non elementum neque laoreet at. Fusce non scelerisque diam. Sed dignissim eleifend justo. Ut eget est eget tellus tincidunt mollis. Donec eros justo, faucibus ac gravida aliquet, elementum a purus. Aliquam vulputate sagittis nibh nec bibendum. Praesent tristique sodales nisi, sed rutrum neque imperdiet ut. Etiam sed odio nec tellus dictum fringilla. Aenean enim purus, aliquam in augue et, tincidunt fermentum est.\r\n\r\nProin rutrum mattis tristique. Aenean et tellus ultricies orci aliquam malesuada nec a dolor. Nullam id eros rutrum, faucibus purus nec, iaculis lectus. Suspendisse mattis erat sit amet vestibulum pharetra. Donec hendrerit odio eget iaculis consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vitae ex finibus, tincidunt risus facilisis, efficitur ipsum. Donec gravida interdum condimentum. Curabitur suscipit, odio a hendrerit tempor, libero odio venenatis lectus, id lobortis libero orci eget sapien. Quisque lobortis dui suscipit risus elementum, ut consectetur augue sodales. Quisque id orci vel ex volutpat consectetur ut vitae urna. Morbi quis aliquam tellus, sit amet lobortis quam. Fusce sed enim egestas, fringilla tellus id, pellentesque nisl.\r\n\r\nDuis lacinia, elit id ultrices commodo, libero velit scelerisque turpis, quis ornare purus ligula non metus. Suspendisse quis posuere ex, sed elementum nunc. Nunc at mauris a felis feugiat accumsan. Sed tristique ut nunc sed viverra. Integer eu luctus diam, in feugiat erat. Sed dignissim quis nisl id porttitor. Phasellus tristique odio ac felis feugiat, vel sagittis nibh luctus. Aliquam at nibh id nibh hendrerit consectetur.\r\n\r\nPraesent nec neque et augue sodales congue eu et libero. Nam scelerisque dolor sed iaculis luctus. Fusce pulvinar dignissim consequat. Proin varius, tellus id congue luctus, lacus elit cursus ipsum, eu tempus ex ex sit amet sem. Pellentesque rhoncus pulvinar ipsum non fermentum. Aenean non libero sit amet massa facilisis placerat. Donec pulvinar purus felis, et placerat lorem dictum eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis id quam eu enim aliquam viverra ut nec lectus. Quisque semper, massa non sodales luctus, nunc sem porttitor nisl, vitae aliquam sapien tortor vel ante. Aliquam placerat, nulla a accumsan porta, quam mauris ornare erat, a mattis ipsum nibh id nulla. Mauris pulvinar, ligula a placerat aliquet, enim massa condimentum mi, vitae lobortis elit urna in purus. Morbi dictum lorem a risus scelerisque, id lobortis erat consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', '2020-12-19 16:14:00'),
+(5, 10, 'baby', 'herv', 'i am sad girl', '2020-12-19 18:39:38'),
+(6, 10, 'baby', 'herv', 'i am sad girl', '2020-12-19 18:40:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Reports`
+--
+
+CREATE TABLE `Reports` (
+  `ReportID` int(11) NOT NULL,
+  `PostID` int(11) NOT NULL,
+  `Reason` text NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Reports`
+--
+
+INSERT INTO `Reports` (`ReportID`, `PostID`, `Reason`, `Date`) VALUES
+(1, 5, 'i hate it here', '2020-12-19 18:49:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `UserID` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`UserID`, `Name`) VALUES
+(2, 'Kaitrin'),
+(3, 'Kaitrin'),
+(4, 'brittany'),
+(5, 'vokey'),
+(6, 'GingyBoy'),
+(7, 'GingyBoy'),
+(8, 'Gingy'),
+(9, 'Gingy'),
+(10, 'starbucks');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Comments`
+--
+ALTER TABLE `Comments`
+  ADD PRIMARY KEY (`CommentID`),
+  ADD KEY `PostID` (`PostID`),
+  ADD KEY `UserID` (`UserID`);
+
+--
+-- Indexes for table `Login`
+--
+ALTER TABLE `Login`
+  ADD PRIMARY KEY (`loginID`),
+  ADD KEY `UserID` (`UserID`);
+
+--
+-- Indexes for table `Posts`
+--
+ALTER TABLE `Posts`
+  ADD PRIMARY KEY (`PostID`),
+  ADD KEY `UserID` (`UserID`);
+
+--
+-- Indexes for table `Reports`
+--
+ALTER TABLE `Reports`
+  ADD PRIMARY KEY (`ReportID`),
+  ADD KEY `PostID` (`PostID`);
+
+--
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`UserID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Comments`
+--
+ALTER TABLE `Comments`
+  MODIFY `CommentID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `Login`
+--
+ALTER TABLE `Login`
+  MODIFY `loginID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `Posts`
+--
+ALTER TABLE `Posts`
+  MODIFY `PostID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `Reports`
+--
+ALTER TABLE `Reports`
+  MODIFY `ReportID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Comments`
+--
+ALTER TABLE `Comments`
+  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`),
+  ADD CONSTRAINT `comments_ibfk_3` FOREIGN KEY (`PostID`) REFERENCES `Posts` (`PostID`);
+
+--
+-- Constraints for table `Login`
+--
+ALTER TABLE `Login`
+  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`);
+
+--
+-- Constraints for table `Posts`
+--
+ALTER TABLE `Posts`
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`);
+
+--
+-- Constraints for table `Reports`
+--
+ALTER TABLE `Reports`
+  ADD CONSTRAINT `reports_ibfk_1` FOREIGN KEY (`PostID`) REFERENCES `Posts` (`PostID`);
